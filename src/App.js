@@ -1,20 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import DestinationPage from './pages/DestinationPage';
-import CrewPage from './pages/CrewPage';
-import TechnologyPage from './pages/TechnologyPage';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Header from './components/Header';
+import Home from './components/Home';
+import Crew from './components/Crew';
+import Destination from './components/Destination';
+import Technology from './components/Technology';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/destination" element={<DestinationPage />} />
-        <Route path="/crew" element={<CrewPage />} />
-        <Route path="/technology" element={<TechnologyPage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/destination" element={ <Destination /> } />
+          <Route path="/technology" element={ <Technology />} />
+          <Route path="/crew" element={ <Crew /> } />
+          <Route exact path="/" element={ <Home /> } />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,11 +1,13 @@
 import React from 'react';
-import Header from '../components/Header'; // Adjust the path if needed
+import Header from '../components/Header'; 
+import Home from '../components/Home';
+
 
 function HomePage() {
   return (
     <div>
       <Header />
-      {/* Rest of your HomePage content */}
+      <Home />
     </div>
   );
 }
