@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   max-width: 100%;
   height: 96px;
@@ -8,19 +8,21 @@
   justify-content: space-between;
 }
 
-.logo{
- color: white;
- width: 48px;
- height: 48px;
- cursor: pointer;
+.logo {
+  color: white;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
 }
-.menu{
+
+.menu {
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.line{
+
+.line {
   width: 100%;
   height: 1px;
   margin-right: -20px;
@@ -30,52 +32,110 @@
   z-index: 2;
 }
 
-.nav{
+.nav {
   display: flex;
   padding: 0rem 2rem;
   height: 80px;
   background: rgba(255, 255, 255, 0.04);
-  /* backdrop-filter: blur(81.5485px); */
-  /* -webkit-backdrop-filter: blur(81.5485px); */
-  font-family: Barlow Condensed;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 19px;
-  letter-spacing: 2.700000047683716px;
-  text-align: left;
+  letter-spacing: 2.7px;
   text-transform: uppercase;
   align-items: center;
 }
-.nav .link{
+
+.nav .link {
   color: #FFFFFF;
   margin: 0 0.5rem;
   height: 90%;
+  display: flex;
   align-items: center;
 }
-.nav .link:hover{
-  border-bottom: 3px solid rgb(255, 255, 255, 0.5);
+
+.nav .link:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
 }
-.link.active{
+
+.link.active {
   border-bottom: 3px solid #FFFFFF;
 }
-.nav h1{
-  font-family: Barlow Condensed;
+
+.nav h1 {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 19px;
-  letter-spacing: 2.700000047683716px;
-  text-align: left;
   margin-right: 8px;
 }
 
-.hamburger{
+.hamburger {
   margin: 0 2rem;
   cursor: pointer;
+  display: flex; /* Ensure it is visible */
+  align-items: center; /* Center the icon */
 }
-@media (max-width: 1000px){
-  .header{
-      margin: 0;
+
+@media (max-width: 1000px) {
+  .header {
+    margin: 0;
+    padding: 0 1rem; /* Adjust padding for small screens */
   }
+}
+
+@media (max-width: 760px) {
+  .mobile-nav {
+    position: fixed; /* Make the nav bar fixed to the screen */
+    top: 0; /* Start from the top of the screen */
+    right: 0;
+    left: 6rem;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding: 2rem; /* Add padding inside the nav */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for depth */
+    z-index: -999; /* Ensure it sits above other content */
+  }
+  
+  .mobile-nav .link {
+    margin-bottom: 2rem; /* Increased margin for more spacing */
+    width: 100%;
+    display: flex; /* Align "00" and "HOME" on the same line */
+    align-items: center;
+    text-align: left; /* Align text to the left */
+    color: white; /* Ensure text color contrasts with the background */
+    font-size: 24px; /* Increase font size for visibility */
+    font-weight: 400;
+    
+  }
+  
+  .mobile-nav .link h1 {
+    margin-right: 1rem; /* Space between "00" and "HOME" */
+    font-size: 24px; /* Match the font size */
+    font-weight: bold;
+    display: inline-block; /* Ensure it stays on the same line */
+  }
+  
+  .hamburger {
+    position: absolute;
+    right: 2rem; /* Adjust position if necessary */
+    top: 2rem; /* Adjust position if necessary */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above the nav menu */
+    color: black;
+  }
+  
+  .link.active {
+    border-right: 3px solid #FFFFFF;
+    border-bottom: 0px;
+    
+  }
+  
+  
+  
 }
