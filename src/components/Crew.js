@@ -9,7 +9,7 @@ import victor from '../assets/crew/image-victor-glover.png'
 function Crew() {
   const [CrewOption, setCrewOption] = useState("Douglas Hurley");
   return <div className="crew">
-      <p className="title"><h2>02 </h2>MEET YOUR CREW</p>
+      <p className="title"><h6>02 </h6>MEET YOUR CREW</p>
       {data.crew.map((member)=>(
       <div key={member.name} className={"crew-info " + (CrewOption === member.name ? "active" : "")}>
         <div className="crew-subinfo">

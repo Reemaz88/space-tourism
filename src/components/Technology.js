@@ -11,7 +11,7 @@ function Technology() {
   const [technology, setTechnology] = useState("launch vehicle");
   return (
     <div className="technology">
-        <p className="title"><h2>03</h2>SPACE LAUNCH 101</p>
+        <p className="title"><h6>03</h6>SPACE LAUNCH 101</p>
         <div className="tech-content">
           <div className="tech-options">
             <input type="button" name="tech" 

@@ -10,7 +10,7 @@ function Destination() {
   const [DestinationOption, setDestination] = useState("Moon");
   return (
     <div className="destination-main">
-        <p className="title"><h2>01</h2>PICK YOUR DESTINATION</p>
+        <p className="title"><h6>01</h6>PICK YOUR DESTINATION</p>
         <div className="destination-options">
             {data.destinations.map((destination)=>(
                 <span key={destination.name}

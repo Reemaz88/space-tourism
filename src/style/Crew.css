@@ -5,12 +5,18 @@
     background-repeat: no-repeat;
     overflow-x: hidden;
     top: 0;
+    left: 0;
     z-index: -10;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    color: #ffffff;
 }
+
+/* .title{
+    margin: 8rem 0rem 0rem 11rem;
+} */
 .crew-info{
     width: 80%;
     height: 40%;

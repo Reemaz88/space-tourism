@@ -1,5 +1,6 @@
 .home{
     position: absolute;
+    left: 0;
     background: url('../assets/home/background-home-desktop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,26 +19,26 @@
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 .content h5{
-    font-family: Barlow Condensed;
+    font-family: Barlow ;
     font-style: normal;
     font-weight: normal;
+    padding-left: 1rem;
     font-size: 28px;
     line-height: 34px;
-    letter-spacing: 4px;
-
+    /* letter-spacing: 4px; */
     color: var(--main-color);
 }
 .content h1{
-    font-family: Bellefair;
+    font-family: "Bellefair", serif;
     font-style: normal;
     font-weight: normal;
     font-size: 150px;
     line-height: 172px;
-    
     color: #FFFFFF;
+    margin: 0;
 }
 .content p{
     font-family: Barlow;
@@ -55,16 +56,27 @@
     background-color: white;
     border-radius: 274px;
     text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.4, 1);
+
 }
 .explore p{
     position: absolute;
-    padding: 120px 60px;
+    padding: 5.5rem 4rem;
     font-family: Bellefair;
     font-size: 32px;
     line-height: 37px;
     letter-spacing: 2px;
     color: #0B0D17;
+    cursor: pointer;
+
 }
+
+.explore:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+
 
 @media (min-width: 760px) and (max-width: 1000px){
     .home{
@@ -74,6 +86,10 @@
         flex-direction: column;
         padding-top: 10rem;
     }
+    .content{
+        align-items: center;
+    }
+
     .content h5{
         font-size: 20px;
         line-height: 24px;
@@ -88,6 +104,10 @@
         line-height: 28px;
         text-align: center;
     }
+
+    .explore p{
+        padding: 6rem 4rem;
+    }
 }
 
 @media (max-width: 760px){
@@ -99,6 +119,7 @@
     }
     .content{
         width: 100%;
+        align-items: center;
     }
     .content h5{
         font-size: 16px;
@@ -114,16 +135,16 @@
         font-size: 15px;
         line-height: 25px;
         text-align: center;
+        margin: 0 1.5rem ;
     }
     .explore{
         width: 200px;
         height: 200px;
     }
     .explore p{
-        padding: 90px 55px;
+        padding: 4.5rem 3rem;
         font-size: 20px;
         line-height: 23px;
-
         text-align: center;
         letter-spacing: 1.25px;
     }
