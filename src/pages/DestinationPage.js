@@ -1,12 +1,11 @@
 import React from 'react';
-import Header from '../components/Header'; // Adjust the path if needed
+import Header from '../components/Header'; 
 
 function DestinationPage() {
   return (
     <div>
       <Header />
-      {/* Rest of your HomePage content */}
-    </div>
+     </div>
   );
 }
 

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import '../style/Technology.css'
 import data from '../data.json';
-
 import launch from '../assets/technology/image-launch-vehicle-portrait.jpg'
 import spaceport from '../assets/technology/image-spaceport-portrait.jpg'
 import capsule from '../assets/technology/image-space-capsule-portrait.jpg'
