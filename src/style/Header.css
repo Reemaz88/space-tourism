@@ -133,11 +133,21 @@
   }
   
   .link.active {
-    border-right: 3px solid #FFFFFF;
-    border-bottom: 0px;
-    
+    border-left: 3px solid #FFFFFF;
+    border-bottom: 0; 
+    padding-left: 1rem;
   }
   
-  
-  
+  .mobile-nav .link:hover {
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
+    padding-left: 1rem;
+  }
+
+  .hamburger {
+    margin: 0.6rem 1rem;
+    cursor: pointer;
+    display: flex; /* Ensure it is visible */
+    align-items: center; /* Center the icon */
+  }
+
 }
